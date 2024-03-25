@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\perme-nest",
+    "\\backend\\perme-nest\\infrastructure",
+    "\\backend\\perme-nest\\infrastructure\\auth",
+    "\\backend\\perme-nest\\infrastructure\\auth\\key",
+    "\\frontend",
+    "\\frontend\\perme-app"
+  ],
+  "SelectedNode": "\\backend\\perme-nest\\infrastructure\\auth\\key",
+  "PreviewInSolutionExplorer": false
+}

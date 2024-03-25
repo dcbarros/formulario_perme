@@ -1,0 +1,30 @@
+version: '3.1'
+
+services:
+  perme-db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: perme
+      POSTGRES_PASSWORD: perme
+    ports:
+      - '5432:5432'
+    networks:
+      - pgsql-nest-network
+  perme-nest:
+    build: ./backend/perme-nest
+    ports:
+      - '3030:3000'
+    volumes:
+      - ./backend/perme-nest/:/app/
+    networks:
+      - pgsql-nest-network
+  perme-react:
+    build: ./frontend/perme-app
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./frontend/perme-app/:/app/
+networks:
+  pgsql-nest-network:
+    driver: bridge
